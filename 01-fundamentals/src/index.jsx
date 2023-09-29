@@ -1,54 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import BookList from "./BookList";
 
 import "./index.css";
-
-const books = [
-  {
-    id: 0,
-    author: "Jordan Moore",
-    title: "Interesting Facts For Curious Minds",
-    img: "./images/book-1.jpg",
-  },
-  {
-    id: 1,
-    author: "James Clear",
-    title: "Atomic Habits",
-    img: "https://m.media-amazon.com/images/I/81bGKUa1e0L._SY466_.jpg",
-  },
-];
-
-const BookList = () => {
-  return (
-    <>
-      <h1>Amazon Best Seller List</h1>
-      <section className="booklist">
-        {books.map((book) => {
-          return <Book key={book.id} {...book} />;
-        })}
-      </section>
-    </>
-  );
-};
-
-const Book = (props) => {
-  const { img, title, author } = props;
-  console.log(props);
-  return (
-    <article className="book">
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
-    </article>
-  );
-};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  // <React.StrictMode>
-  <BookList />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <BookList />
+  </React.StrictMode>
 );
 
 // // // jsx
@@ -70,3 +31,15 @@ root.render(
 // opening element tag (or opening parenthesis) needs to be in the same row as return.
 
 // variables in jsx need to be expressions (which return a value), we can't use statements. Written inside single curlies.
+
+// const handleFormSubmission = (e) => {
+//   e.preventDefault();
+//   console.log("form submitted");
+
+// we can pass the event object as a param in the reference function, as well.
+// };
+
+// // //
+
+// react data flow - props can only be passed down the component ree.
+// Context API, redux and other state libraries are exceptions
