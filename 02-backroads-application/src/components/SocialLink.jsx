@@ -1,7 +1,13 @@
 import React from "react";
 
-const SocialLink = () => {
-  return <div>SocialLink</div>;
+const SocialLink = ({ id, href, icon, itemClass }) => {
+  return (
+    <li>
+      <a href={href} target="_blank" rel="noreferrer" className={itemClass}>
+        <i className={icon}>{icon}</i>
+      </a>
+    </li>
+  );
 };
 
 export default SocialLink;
