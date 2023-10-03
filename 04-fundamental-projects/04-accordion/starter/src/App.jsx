@@ -1,4 +1,27 @@
+import { useState } from "react";
+import Questions from "./Questions";
+import data from "./data";
+
 const App = () => {
-  return <h2>Accordion Starter</h2>;
+  const [questions, setQuestions] = useState(data);
+  const [activeId, setActiveId] = useState(null);
+
+  const toggleQuestion = (id) => {
+    // if id equals activeId, set newActiveId to null
+    // if id doesn't equal activeId set newActiveId to id
+    const newActiveId = id === activeId ? null : id;
+
+    setActiveId(newActiveId);
+  };
+
+  return (
+    <main>
+      <Questions
+        questions={questions}
+        activeId={activeId}
+        toggleQuestion={toggleQuestion}
+      />
+    </main>
+  );
 };
 export default App;
