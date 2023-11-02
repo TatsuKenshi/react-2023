@@ -13,5 +13,6 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react-refresh/only-export-components": [0, { allowConstantExport: true }],
+    "react/prop-types": "off",
   },
 };
