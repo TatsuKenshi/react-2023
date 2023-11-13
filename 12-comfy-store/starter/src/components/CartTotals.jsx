@@ -19,7 +19,7 @@ const CartTotals = () => {
           <span>Shipping</span>
           <span className="font-medium">{formatPrice(shipping)}</span>
         </p>
-        {/* Tac */}
+        {/* Tax */}
         <p className="flex justify-between text-xs border-b border-base-300 pb-2">
           <span>Tax</span>
           <span className="font-medium">{formatPrice(tax)}</span>
