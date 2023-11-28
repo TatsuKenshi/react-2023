@@ -24,7 +24,9 @@ const userSlice = createSlice({
       console.log("login");
     },
     logoutUser: (state) => {
-      console.log("logout");
+      state.user = null;
+      localStorage.removeItem("user");
+      toast.success("User successfully logged out.");
     },
     toggleTheme: (state) => {
       const { business, emerald } = themes;
