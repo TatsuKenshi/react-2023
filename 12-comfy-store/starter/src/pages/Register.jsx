@@ -14,7 +14,7 @@ export const action = async ({ request }) => {
   } catch (error) {
     const errorMessage =
       error?.response?.data?.error?.message ||
-      "please double check your credentials";
+      "please check your credentials and try again";
     toast.error(errorMessage);
     return null;
   }

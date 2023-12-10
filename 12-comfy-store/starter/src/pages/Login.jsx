@@ -19,7 +19,7 @@ export const action =
     } catch (error) {
       const errorMessage =
         error?.response?.data?.error?.message ||
-        "please double check your credentials";
+        "please check your credentials and try again";
       toast.error(errorMessage, { draggable: false });
       return null;
     }
