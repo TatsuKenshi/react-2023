@@ -7,7 +7,7 @@ export const loader = (store) => () => {
   const user = store.getState().userState.user;
 
   if (!user) {
-    toast.warn("You must be logged in to checkout");
+    toast.warn("You have to be logged in to checkout");
     return redirect("/login");
   }
   return null;
@@ -16,7 +16,7 @@ export const loader = (store) => () => {
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cartState.cartTotal);
   if (cartItems.length === 0) {
-    return <SectionTitle text="Your cart is empty, fill it" />;
+    return <SectionTitle text="Your cart is empty, browse our catalog" />;
   }
 
   return (
